@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+  <style>
+    .media-controls-container {
+      position: relative !important;
+    }
+    .visible-controls-bar {
+      width: 100% !important;
+      height: 100% !important;
+      z-index: 1 !important;
+    }
+  </style>
+  <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+  
+  <script type="javascript" type="https://cdn.streamroot.io/videojs-hlsjs-plugin/1/stable/videojs-hlsjs-plugin.js"></script>
+</head>
+<body>
+  <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="https://image.mux.com/01b2r4H6Pg8Q01NJZGppCu6X6tmfP6f6Jtp5oFZaETUwU/thumbnail.jpg"
+    data-setup="{}"
+  >
+    <source src="https://stream.mux.com/01b2r4H6Pg8Q01NJZGppCu6X6tmfP6f6Jtp5oFZaETUwU.m3u8?default_subtitles_lang=en" type="application/x-mpegURL" />
+  </video>
+  <script type="text/javascript">
+    var options = {
+            html5: {
+                hlsjsConfig: {
+                  // Put your hls.js config here
+                }
+            }
+        };
+
+        var player = videojs('my-video', options);
+  </script>
+</body>
+</html>
